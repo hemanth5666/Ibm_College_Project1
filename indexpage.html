@@ -1,0 +1,1220 @@
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="shortcut icon" href="PLACEMENT.png" />
+
+    <script src="./js/anime.min.js"></script>    
+
+    <script src="js/intro.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+
+</head>
+
+<style>
+
+*  color varibles for the page */
+
+
+
+
+
+root {
+
+
+
+    --font: black;
+
+    --background: wheat;
+
+    --menuColor: black;
+
+}
+
+
+
+
+
+
+
+body {
+
+    width: auto;
+
+    background-image: url('close-up-businessman-writing-meeting.jpg');
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    color: black;
+
+    background-color: skyblue;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+
+/* nav bar styling */
+
+
+
+.navBar {
+
+    margin-bottom: 20px;
+
+    width: 100%;
+
+    height: auto;
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    display: inline-block;
+
+    z-index: 1;
+
+    background-color: rgba(0, 0, 0, 0.541);
+
+}
+
+
+
+.navBar a {
+
+    text-decoration: none;
+
+    color: white;
+
+}
+
+
+
+img {
+
+    margin: 15px;
+
+}
+
+
+
+i {
+
+    font-size: 20px;
+
+}
+
+
+
+i:hover,
+
+a:hover {
+
+    color: dodgerblue;
+
+    cursor: pointer;
+
+}
+
+
+
+.navBar nav li {
+
+    padding: 10px;
+
+    margin: 20px;
+
+    list-style-type: none;
+
+    display: inline-block;
+
+}
+
+
+
+
+
+#hamMenu {
+
+    visibility: hidden;
+
+}
+
+
+
+/*  grid system for the webpage */
+
+
+
+.header {
+
+    width: 80%;
+
+    height: auto;
+
+    position: absolute;
+
+    top: 10%;
+
+    left: 5%;
+
+    display: grid;
+
+    grid-template-rows: 1fr;
+
+}
+
+
+
+.header>div {
+
+    margin-top: 10%;
+
+    max-width: 100%;
+
+
+
+}
+
+
+
+.IntroMsg {
+
+    margin: 20px;
+
+    position: relative;
+
+    width: 100%;
+
+    left: 5%;
+
+    top: -20%;
+
+    text-align: center;
+
+    padding: 10px;
+
+    height: auto;
+
+    opacity: 0.5
+;
+
+    background-color: transparent;
+
+    border-radius: 10px;
+
+
+
+}
+
+
+
+.logo {
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+
+
+}
+
+
+
+/* for image seperation */
+
+
+
+
+
+.story {
+
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    text-align: center;
+
+}
+
+
+
+.imgContainer {
+
+    width: 90%;
+
+    height: fit-content;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-rows: 1fr 1fr 1fr;
+
+    color: white;
+
+
+
+
+
+}
+
+
+
+.imgContainer>div {
+
+    margin: 10px;
+
+}
+
+
+
+.menuIntro>img {
+
+    width: 75%;
+
+    border-radius: 10%;
+
+    height: auto;
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    filter: blur(0.5px);
+
+}
+
+
+
+.menuIntro {
+
+    text-align: center;
+
+    color: rgb(39, 39, 39);
+
+    border-radius: 10px;
+
+}
+
+
+
+.menu {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    position: relative;
+
+    width: 100%;
+
+    left: 0%;
+
+    text-align: center;
+
+    padding: 20px;
+
+    opacity: 0.9;
+
+    background-color: rgba(100, 98, 98, 0.288);
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+
+
+    .menu,
+
+    .form {
+
+        grid-template-rows: 1fr;
+
+        grid-template-columns: 1fr;
+
+        position: relative;
+
+        top: -5%;
+
+
+
+    }
+
+
+
+    .logo {
+
+        width: 200px;
+
+        height: 200px;
+
+    }
+
+
+
+    html {
+
+        font-size: 12px;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+
+
+    h2,
+
+    h1 {
+
+        font-size: 18px;
+
+    }
+
+
+
+    .navBar,
+
+    .navBar nav li {
+
+        width: 100%;
+
+        height: 100%;
+
+        display: block;
+
+    }  
+
+
+
+    #hamMenu {
+
+        visibility: visible;
+
+        color: white;
+
+        font-size: 25px;    
+
+        z-index: -1;
+
+    }
+
+
+
+}
+
+
+
+
+
+.form {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    position: relative;
+
+    width: 100%;
+
+    left: 0%;
+
+    top: 40px;
+
+    text-align: center;
+
+    padding: 20px;
+
+    opacity: 0.9;
+
+    background-color: rgba(100, 98, 98, 0.288);
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+}
+
+
+
+.form input {
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    width: 80%;
+
+    opacity: 0.9;
+
+    margin: 10px;
+
+
+
+}
+
+
+
+.form span {
+
+    margin: 10px;
+
+}
+
+
+
+.form button {
+
+    width: 60%;
+
+    position: relative;
+
+    left: 2%;
+
+    margin: 5px;
+
+    font-size: 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: white;
+
+    text-shadow: 0.5px 0.5px black;
+
+    background-color: rgb(109, 103, 93);
+
+    padding: 10px;
+
+}
+
+
+
+.form button:hover {
+
+    cursor: pointer;
+
+    box-shadow: 0px 3px 6px slategray;
+
+}
+
+
+
+.form button:active {
+
+    background-color: rgba(30, 96, 161, 0.801);
+
+    border: none;
+
+}
+
+
+
+#home-menu ul {
+
+    background-color: white;
+
+    border-radius: 5px;
+
+    list-style: none;
+
+    padding: 30px;
+
+}
+
+
+
+#home-menu h2 {
+
+    text-shadow: 0.5px 0.5px black;
+
+}
+
+
+
+#home-menu ul:after {
+
+    content: "";
+
+    clear: both;
+
+    display: block;
+
+}
+
+
+
+#home-menu li {
+
+    float: left;
+
+    width: 50%;
+
+    padding: 0;
+
+    margin: 20px 0 20px 8%;
+
+    border-bottom: 1px solid slategray;
+
+}
+
+.dish {
+
+    float: left;
+
+    color: #555;
+
+    font-weight: bold;
+
+    position: relative;
+
+    z-index: 1;
+
+    background-color: transparent;
+
+    padding-right: 15px;
+
+}
+
+
+
+.Price {
+
+    float: right;
+
+    color: #555;
+
+    font-weight: bold;
+
+    position: relative;
+
+    background-color: transparent;
+
+    padding-left: 15px;
+
+}
+
+
+
+.Description {
+
+    clear: both;
+
+    display: block;
+
+    color: #999;
+
+    font-style: italic;
+
+    font-size: 14px;
+
+    padding-top: 10px;
+
+    position: relative;
+
+    top: -8px;
+
+}
+
+
+
+
+
+.logo {
+
+    animation: windowsFly ease-out 3s;
+
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 4px rgb(255, 255, 255), 0.3em 0.3em 4em rgba(0, 0, 0, 0.3);
+
+}
+.slider-container {
+      width: 180%;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+Margin-left:0;
+Margin-right:100px;
+    }
+
+    /* Slider images */
+    .slider-image {
+      width: 53%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+Margin-left:0;
+Margin-right:100px;
+
+      opacity: 0;
+-webkit-animation-name: slide_animation;
+      animation-name: slide_animation;
+      -webkit-animation-duration: 33s;
+      animation-duration: 33s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+      -webkit-animation-play-state: running;
+      animation-play-state: running;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Animation for active image */
+    .slider-image.active {
+      opacity: 1;
+    }
+
+
+
+/*  image animation for resturant*/
+
+
+
+@keyframes windowsFly {
+
+    0% {
+
+        filter: blur(10px);
+
+        opacity: 0;
+
+        width: 0px;
+
+
+
+    }
+
+
+
+    50% {
+
+        filter: blur(5px);
+
+        opacity: 0.8;
+
+        width: 50%;
+
+    }
+
+
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+#footer-menu.kilimanjaro_area {
+    position: relative;
+    z-index: 1;
+	}
+	.foo_top_header_one {
+    background-color: #15151e;
+    color: #fff;
+}
+#footer-menu.section_padding_100_70 {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+#footer-menu.foo_top_header_one {
+    color: #fff;
+}#footer-menu.kilimanjaro_part {
+    margin-bottom: 30px;
+}
+#footer-menu.foo_top_header_one .kilimanjaro_part > h5 {
+    color: #fff;
+}
+#footer-menu.kilimanjaro_part h4, .kilimanjaro_part h5 {
+    margin-bottom: 30px;
+}
+#footer-menu.kilimanjaro_single_contact_info > p, .kilimanjaro_single_contact_info > h5, .kilimanjaro_blog_area > a, .foo_top_header_one .kilimanjaro_part > p {
+    color: rgba(255,255,255,.5);
+}
+p, ul li, ol li {
+    font-weight: 300;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+#footer-menu.kilimanjaro_bottom_header_one {
+    background-color: #111;
+}
+#footer-menu.section_padding_50 {
+    padding: 50px 0;
+}
+#footer-menu.kilimanjaro_bottom_header_one p {
+    color: #fff;
+    margin: 0;
+}
+p, ul li, ol li {
+    font-weight: 300;
+}
+#footer-menu.kilimanjaro_bottom_header_one a {
+    color: inherit;
+    font-size: 14px;
+}
+a, h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+#footer-menu.m-top-15 {
+    margin-top: 15px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+#footer-menu.kilimanjaro_widget > li {
+    display: inline-block;
+}
+p, ul li, ol li {
+    font-weight: 300;
+}
+ol li, ul li {
+    list-style: outside none none;
+}
+#footer-menu.kilimanjaro_widget a {
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #888;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 4px;
+    padding: 7px 12px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+#footer-menu.kilimanjaro_links a {
+    border-bottom: 1px solid #333;
+    color: rgba(255,255,255,.5);
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+#footer-menu.kilimanjaro_links a {
+    color: rgba(255,255,255,.5);
+    font-size: 13px;
+}
+top-15 {
+    margin-top: 15px;
+}
+.foo_top_header_one .kilimanjaro_part > h5 {
+    color: #fff;
+}
+.kilimanjaro_part h4, .kilimanjaro_part h5 {
+    margin-bottom: 30px;
+}
+#footer-menu.kilimanjaro_social_links > li {
+    display: inline-block;
+}
+p, ul li, ol li {
+    font-weight: 300;
+}
+#footer-menu.kilimanjaro_social_links a {
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #888;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 3px;
+    padding: 7px 12px;
+}
+#footer-menu.kilimanjaro_blog_area .kilimanjaro_date {
+    color: #27ae60;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.kilimanjaro_blog_area > p {
+    color: rgba(255,255,255,.5);
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+.kilimanjaro_works > a {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 33.33333333%;
+    z-index: 1;
+}
+.kilimanjaro_thumb {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 75px;
+}
+.kilimanjaro_links a i {
+    padding-right: 10px;
+}
+  /* :: 18.0 Footer Area CSS */
+#footer-menu.footer_area {
+        position: relative;
+        z-index: 1;
+    }
+ #footer-menu.footer_bottom p > i,
+    .footer_bottom p > a:hover {
+        color: #27ae60;
+    }	
+
+  #footer-menu  .social_links_area {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 50px 0 30px 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+#footer-menu .social_links_area > a:hover {
+        color: #27ae60;
+    }
+
+    #footer-menu.inline-style .social_links_area > a:hover {
+        background-color: transparent;
+        color: #27ae60;
+        border: 0px solid transparent;
+    }
+ .single_feature:hover .feature_text h4 {
+        color: #27ae60;
+    }
+.kilimanjaro_blog_area {
+    border-bottom: 1px solid #333;
+    margin-bottom: 15px;
+    padding: 0 0 15px 90px;
+    position: relative;
+    z-index: 1;
+}
+.kilimanjaro_links a {
+    border-bottom: 1px solid #333;
+    color: rgba(255,255,255,.5);
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+
+
+ 
+ 
+</style>
+
+<body>
+
+
+
+    <!--  animated nav bar -->
+
+     <div class="navBar" id="nv">
+
+        <nav>
+
+            <i class="bi bi-justify" onclick="alert('heelo')" id="hamMenu"></i>
+
+            <ul>
+
+                <!-- main nav section -->
+
+                <li><a href='?page=home'>HOME </a></li>
+
+                <li><a href='analysispg.html'>ANALYSIS </a></li>
+<li><a href='login.html'>LOGIN </a></li>
+<li><a href='signup.html'>SIGN UP </a></li>
+
+                <li><a href='?page=contactus'>CONTACT US </a></li>
+
+                <!-- icons social and phone -->
+
+                <li class="socialIcon"><a href="call:111-111-111"><i class="bi bi-telephone-forward"></i></a></li>
+
+                <li class="socialIcon"><a href="instgram.com/example"><i class="bi bi-instagram"></i></a></li>
+
+                <li class="socialIcon"><a href="mailto:example@example.com"><i class="bi bi-envelope-fill"></i></a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>  
+
+    
+
+    <div class="header">
+
+
+
+       
+
+         
+
+    <!-- main logo !-->
+
+	<div class="IntroMsg">
+
+    <img  alt="Analysis make success" 
+
+    class="logo" src="PLACEMENT.png" />
+
+    </div>
+
+        <!-- subject-->
+
+	<div class='IntroMsg'>
+
+        <h1> If the statistics are boring, you've got the wrong numbers
+<style="text-decoration: none; color:black;">
+</h1>
+
+    </br>
+ 
+
+        <span>
+
+           Let us assist your wonderful career
+
+        </span>
+  </br>
+  </br>
+
+        <h2>
+
+       <a href="call:111-111-111" style="text-decoration: none; color: black;"> <i class="bi bi-telephone-forward-fill"> <span> Contact US today </span></i></a>
+
+       
+
+        </h2>
+
+	</div>
+ <div class="menu">   
+
+        <div class="menuIntro">     
+
+            <!-- img tile system -->
+
+            <img src="istockphoto-1299055072-170667a.webp"/><br>
+
+            <img src="istockphoto-1418476287-170667a.webp" /><br>
+<div class="slider-container">
+    <img class="slider-image active" src="file:///Users/harishsriraj/Downloads/WhatsApp%20Image%202023-09-07%20at%2011.27.55%20PM.jpeg" alt="Image 1">
+    <img class="slider-image" src="file:///Users/harishsriraj/Downloads/WhatsApp%20Image%202023-09-07%20at%2011.28.21%20PM.jpeg" alt="Image 2">
+    <img class="slider-image" src="file:///Users/harishsriraj/Downloads/WhatsApp%20Image%202023-09-07%20at%2011.28.07%20PM.jpeg" alt="Image 3">
+    <img class="slider-image" src="file:///Users/harishsriraj/Downloads/WhatsApp%20Image%202023-09-07%20at%2011.28.15%20PM.jpeg" alt="Image 4">
+  </div>
+<script>
+const sliderImages = document.querySelectorAll('.slider-image');
+    let currentImageIndex = 0;
+
+    function showNextImage() {
+      sliderImages[currentImageIndex].classList.remove('active');
+      currentImageIndex = (currentImageIndex + 1) % sliderImages.length;
+      sliderImages[currentImageIndex].classList.add('active');
+    }
+
+    setInterval(showNextImage, 3000);
+</script>
+
+
+        </div>
+
+
+
+            
+
+    <!-- menu layout-->
+
+        <section id="home-menu">
+
+
+
+	<ul>
+
+		<li>
+
+			<span class="dish">About us</span>
+
+			<span class="Description">In our college T&P department collecting the placements data manually and also they are
+maintaining student’s data who are qualified for next rounds in the form of excel sheets. So with the
+help of T&P department we have decided to develop a web based application on training and
+placements. This project is completely developed by taking the inputs from the TPO.</span>
+
+		</li>
+
+
+		<li>
+
+			<span class="dish">MISSION</span>
+<span class="dish"> </span>
+
+			<span class="Description">"To empower individuals and organizations in making informed career decisions and optimizing talent placement through cutting-edge data analysis, comprehensive insights, and personalized guidance."</span>
+
+		</li>
+
+		<li>
+
+			<span class="dish">VISION</span>
+
+
+			<span class="Description">"To become the leading global platform for career placement analysis, bridging the gap between job seekers and employers by providing unmatched data-driven solutions. We envision a future where every career move is guided by intelligent analysis, ensuring the right fit for individuals and companies alike, resulting in increased job satisfaction and organizational success."</span>
+
+		</li>
+<li>
+
+			<span class="dish">MEET THE TEAM</span>
+
+			<span class="Description">Harish Sriraj N</span>
+<span class="Description">Mahalakshmi R</span>
+<span class="Description">Nikitha Y S</span>
+<span class="Description">Hemanth B</span>
+
+		</li>
+
+		
+	</ul>
+
+
+ </div>
+
+</section>
+<section id="footer-menu">
+<link href="bootstrap.css" rel="stylesheet" id="bootstrap-css">
+<script src="bootstrap.js"></script>
+<script src="jquery-3.4.1.slim.js"></script>
+ <!--footer-->
+<footer class="kilimanjaro_area">
+        <!-- Top Footer Area Start -->
+        <div class="foo_top_header_one section_padding_100_70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part">
+                            <h5>About Us</h5>
+                            <p>In our college T&P department collecting the placements data manually and also they are maintaining student’s data who are qualified for next rounds in the form of excel sheets. So with the help of T&P department we have decided to develop a web based application on training and placements. This project is completely developed by taking the inputs from the TPO.</p>
+                        </div>
+                        <div class="kilimanjaro_part m-top-15">
+                            <h5>Social Links</h5>
+                            <ul class="kilimanjaro_social_links">
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                                <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> Pinterest</a></li>
+                                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part">
+                            <h5>Tags Widget</h5>
+                            <ul class=" kilimanjaro_widget">
+                                <li><a href="#">Classy</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Creative</a></li>
+                                <li><a href="#">One Page</a></li>
+                                <li><a href="#">Multipurpose</a></li>
+                                <li><a href="#">Minimal</a></li>
+                                <li><a href="#">Classic</a></li>
+                                <li><a href="#">Medical</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="kilimanjaro_part m-top-15">
+                            <h5>Important Links</h5>
+                            <ul class="kilimanjaro_links">
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms & Conditions</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>About Licences</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Help & Support</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Careers</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Privacy Policy</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Community & Forum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part">
+                            <h5>Latest News</h5>
+                            <div class="kilimanjaro_blog_area">
+                                <div class="kilimanjaro_thumb">
+								<img class="img-fluid" src="trade-school-vs-college-1-1200x600.jpg" alt="">
+
+                                </div>
+                                <a href="#">With no bulk hiring by IT services companies this year, colleges are focusing more on IT product companies, startups and core companies to tide over challenging times.</a>
+                                <p class="kilimanjaro_date">Sep 2, 2023,</p>
+                             
+                            </div>
+                            <div class="kilimanjaro_blog_area">
+                                <div class="kilimanjaro_thumb">
+								<img class="img-fluid" src="file:///Users/harishsriraj/Downloads/download%20(1).jpeg" alt="">
+                                </div>
+                                <a href="#">With the majority of bulk recruiters staying away from campus placements this year, many engineering college</a>
+                                <p class="kilimanjaro_date">Sep 2, 2023</p>
+          
+                            </div>
+                            <div class="kilimanjaro_blog_area">
+                                <div class="kilimanjaro_thumb">
+								<img class="img-fluid" src="file:///Users/harishsriraj/Downloads/download%20(1).jpeg" alt="">
+                                </div>
+                                <a href="#">Some of the top colleges in the city too have recorded only above-average placements. As the academic year is coming to an end, students still not placed are finding it hard to secure a job by themselves.</a>
+                                <p class="kilimanjaro_date">2 sep 2023</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="kilimanjaro_part">
+                            <h5>Quick Contact</h5>
+                            <div class="kilimanjaro_single_contact_info">
+                                <h5>Phone:</h5>
+                                <p>+255 255 54 53 52 <br> +255 255 53 52 51</p>
+                            </div>
+                            <div class="kilimanjaro_single_contact_info">
+                                <h5>Email:</h5>
+                                <p> placementinsights@email.com</p>
+                            </div>
+                        </div>
+                        <div class="kilimanjaro_part">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom Area Start -->
+        <div class=" kilimanjaro_bottom_header_one section_padding_50 text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>© All Rights Reserved by <a href="#">placement insights<i class="fa fa-love"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+    </footer>
+
+   
+
+
+
+
+
+       

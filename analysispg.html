@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Placement Analysis</title>
+  <style>
+    /* CSS for decorative elements */
+    body {
+      background-image: url('file:///Users/harishsriraj/Downloads/photo-1517245386807-bb43f82c33c4%20(1).jpeg');
+      background-size: cover;
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    
+    h1 {
+      color: #333;
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Placement Analysis</h1>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="graduation-year">Graduation Year:</label>
+    <input type="number" id="graduation-year" name="graduation-year" required>
+    
+    <label for="sslc-percentage">SSLC Percentage:</label>
+    <input type="number" id="sslc-percentage" name="sslc-percentage" required>
+    
+    <label for="hsc-percentage">HSC Percentage:</label>
+    <input type="number" id="hsc-percentage" name="hsc-percentage" required>
+    
+    <label for="cgpa">CGPA:</label>
+    <input type="number" id="cgpa" name="cgpa" step="0.01" required>
+    
+    <label for="skills">Skills:</label>
+    <textarea id="skills" name="skills" rows="4" required></textarea>
+    
+    <label for="interests">Interests:</label>
+    <textarea id="interests" name="interests" rows="4" required></textarea>
+    
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
